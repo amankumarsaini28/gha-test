@@ -1,2 +1,2 @@
 cleanup:
-	@echo "cleaning up $(PR_NUMBER)"`
+	@echo "cleaning up $(PR_NUMBER)"
