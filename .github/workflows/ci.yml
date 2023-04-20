@@ -20,7 +20,7 @@ jobs:
       run: make cleanup
 
     - name: cleanup
-      if: github.ref == 'refs/heads/master'
+      if: github.ref == 'refs/heads/main'
       env:
         PR_NUMBER: ${{ github.event.number }}
       run: make cleanup
