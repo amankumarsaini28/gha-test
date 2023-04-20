@@ -14,5 +14,13 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     
+    - name: build
+      env:
+        PR_NUMBER: ${{ github.event.number }}
+      run: make cleanup
+
     - name: cleanup
+      if: github.ref == 'refs/heads/master'
+      env:
+        PR_NUMBER: ${{ github.event.number }}
       run: make cleanup
